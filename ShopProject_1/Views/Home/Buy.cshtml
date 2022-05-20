@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;    
+    }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Оформление заказа</title>
+    <style>
+       .screen{
+       display: flex;
+       justify-content: center;
+       padding-top:20%;
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-image:url(https://static-prod.weplay.tv/2021-06-24/9d06eebd8607fd0b828d6a9ffea3e7e9.232323-040404-141414.jpeg);
+       background-position:58%;
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    .text{
+        opacity:0.8;
+        color:white;
+        font:25px "Open Sans",sans-serif;
+        text-align:center;
+    }
+    .btn{
+      
+      color:white;
+      background: rgba(10,10,10,0.7);
+      text-decoration:none;
+      border:1px solid;
+      width:100px;
+      height:30px;
+    }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="text">
+   <h3>Форма оформления покупки @ViewData["GameName"]</h3>
+         <h3>Стоимость покупки @ViewData["GamePrice"]  $</h3>
+        <p>Для оформления покупки заполните следующие поля:</p>
+        <form method="post">
+            <table>
+                
+                <tr>
+                    <td>Адрес:</td>
+                    <td><input type="text" name="Adress" /></td>
+                </tr>
+                <tr>
+                    <td>Телефон:</td>
+                    <td><input type="text" name="Phone" /></td>
+                </tr>
+                <tr><td><input class="btn" type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+             </form>
+             <h3> @ViewData["Message"]</h3>
+        </div>
+    </div>
+</body>
+</html>
+

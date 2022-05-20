@@ -1,0 +1,504 @@
+﻿@{
+    Layout = null;    
+    }
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="utf-8">
+ <link rel = "stylesheet" href="css.css">
+ <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Open+Sans:400,700" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+ <title>xz</title>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <style>
+body{
+margin: 0;
+font: 14px/1.42857143 "Open Sans",sans-serif;
+color: #fff;
+background: rgba(10,10,10,.9);
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+/*Head----------------------------------------------------*/
+.nav_bar.pad{
+background: rgba(10,10,10,0.9);
+min-height: 44px;
+}
+.nav_bar.pad .nav_link {
+padding: 10px 0;
+}
+.nav_bar{
+position: fixed;
+right: 0;
+left: 0;
+z-index: 1030;
+min-height: 80px;
+background: rgba(10,10,10,.4);
+transition: .3s background ease;
+}
+.container{
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+}
+.nav_link{
+    padding: 30px 0;
+    align-items: center;
+}
+.nav{
+    opacity: .8;
+    margin-left: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+.nav:hover{
+    transition: .3s;
+    opacity: 1;
+}
+.search{
+    float: right;
+    margin-right: 30px;
+}
+.form-search {
+  display: inline-block;
+  border-bottom: 1px solid;
+}
+.form-search input {
+  all: unset;
+    opacity: .7;
+}
+.form-search input:hover{
+    opacity: 1;
+}
+.reg{
+    border-bottom: 1px solid;
+    margin-right: 20px;
+    color: white;
+    float: right;
+    transform: none;
+    text-decoration: none;
+}
+i{
+    font-style: normal;
+}
+.banner{
+    padding-top: 80px;
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.image{
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(https://kartinkin.net/uploads/posts/2021-01/1611220165_41-p-igrovoi-fon-dlya-teksta-46.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.name_game{
+    margin-bottom: 300px;
+    position: absolute;
+    font-weight: 100;
+    color: #ffff;
+    font:"Josefin Sans",sans-serif;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.btn{
+    background-color: #c9572a;
+    border-color: #c9572a;
+    transition: .5s;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 20px;
+    height: 60px;
+    text-align: center;
+    width: 250px;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    display: inline-block;
+}
+/*Slider--------------------------------------------------*/
+.slider{
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: 400px;
+}
+.gSlider_1{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.gSlider_2{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.gSlider_3{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.gSlider_4{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.gSlider_1:hover .gSlider_name_1 {opacity: 0.7;}
+.gSlider_name_1{
+    opacity: 0;
+    transition: opacity, 0.2s;
+    background: #000;
+    position: absolute;
+    top: 70%;
+    width: 329.5%;
+    height: 30%;
+}
+.gSlider_2:hover .gSlider_name_2 {opacity: 0.7;}
+.gSlider_name_2{
+    opacity: 0;
+    transition: opacity, 0.2s;
+    background: #000;
+    position: absolute;
+    top: 70%;
+    width: 329.5%;
+    height: 30%;
+}
+.gSlider_3:hover .gSlider_name_3 {opacity: 0.7;}
+.gSlider_name_3{
+    opacity: 0;
+    transition: opacity, 0.2s;
+    background: #000;
+    position: absolute;
+    top: 70%;
+    width: 329.5%;
+    height: 30%;
+}
+.gSlider_4:hover .gSlider_name_4 {opacity: 0.7;}
+.gSlider_name_4{
+    opacity: 0;
+    transition: opacity, 0.2s;
+    background: #000;
+    position: absolute;
+    top: 70%;
+    width: 329.5%;
+    height: 30%;
+}
+.slider_text_1{
+    border-bottom: 2px solid;
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.slider_text_2{
+    border-bottom: 2px solid;
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.slider_text_3{
+    border-bottom: 2px solid;
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.slider_text_4{
+    border-bottom: 2px solid;
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.gSlider_1:hover .slider_img_1{filter: brightness(80%);}
+.gSlider_2:hover .slider_img_2{filter: brightness(80%);}
+.gSlider_3:hover .slider_img_3{filter: brightness(80%);}
+.gSlider_4:hover .slider_img_4{filter: brightness(80%);}
+/*decription---------------------------------------*/
+.discription{
+    width: 100%;
+    height: 650px;
+}
+.descrip_img{
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(https://phonoteka.org/uploads/posts/2021-05/1620855668_8-phonoteka_org-p-fon-dlya-yutuba-igri-8.jpg);
+    opacity: 0.4;
+}
+.discrip_text{
+    width: 50%;
+    position: relative;
+    top: 30%;
+    left: 60px;
+}
+.discrip_text_1{
+    letter-spacing: 3px;
+    font:"Josefin Sans",sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+}
+.discrip_text_2{
+    letter-spacing: 3px;
+    font:"Josefin Sans",sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+}
+.social{
+    background-position: 50% 50%;
+    background-image: url(https://phonoteka.org/uploads/posts/2021-06/1624418122_16-phonoteka_org-p-oboi-na-rabochii-stol-minimalizm-anime-kra-16.png);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.instagram{
+    top: 40%;
+    transition: .5s;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 20px;
+    height: 60px;
+    text-align: center;
+    width: 250px;
+    border: 1px solid;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    display: inline-block;
+    background: rgba(10,10,10,0.7);
+}
+/*order-----------------------------------------*/
+.order{
+    position: relative;
+    width: 100%;
+    height: 650px;
+
+}
+.order_img{
+    opacity: 0.7;
+    width: 100%;
+    height: 650px;
+    position: absolute;
+     background-image:url(https://i1.wp.com/wallpapertag.com/wallpaper/full/8/7/f/320094-gaming-background-1920x1080-for-samsung-galaxy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.order_info{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    top: 42%;
+
+}
+.order_text{
+    font:"Josefin Sans",sans-serif;
+    letter-spacing: 3px;
+    font-weight: 500;
+    position: absolute;
+    z-index: 11;
+    font-size: 40px;
+
+}
+.order_btn{
+    transition: .5s;
+    position: absolute;
+    z-index: 11;
+    top: 40%;
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 8px;
+    height: 60px;
+    text-align: center;
+    width: 150px;
+    border: 2px solid;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    display: inline-block;
+}
+.footer{
+    text-align: center;
+    padding-top: 20px;
+    background: rgba(10,10,10,.95);
+    width: 100%;
+    height: 80px;
+}
+.order_btn:hover{
+    background-color: #c9572a;
+    border-color: #c9572a;
+}
+.instagram:hover{
+    background-color: #c9572a;
+    border-color: #c9572a;
+}
+
+
+
+		</style>
+</head>
+<body>
+    <nav class="nav_bar" id="nav_bar">
+        <div class="container">
+                <div class="nav_link">
+                <a class = "nav"  href="https://stopgame.ru/">Новости</a>
+                <a class = "nav" data-scroll = "#dis" href="">Описание</a>
+                   <a class="reg">
+                    Вы авторизированны
+             
+                </a>
+                  
+                </div>
+        </div>
+    </nav>
+<div class="banner">
+
+    <div class="image">
+    </div>
+    <h1 class="name_game">INIMA GAME</h1>
+    <a href="https://youtu.be/dQw4w9WgXcQ" class="btn">&#9650; Watch The Trailer</a>
+</div>
+<div class="container">
+<div class="slider__content" >
+   <div>
+    <div class="slider" id="slider">
+
+<!--------------------------------------------->
+   <div >
+    <div class="gSlider_1" >
+    <img class = "slider_img_1" src="https://shinobi-master-games.ru/images/Screenshots/GTA_5/GTA_5-247.jpg" alt="" width="235px" height="300px">
+        <a href="/Home/Buy/1"><div class="gSlider_name_1"><h5 class="slider_text_1">GTA</h5></div></a>
+    </div>
+    </div>
+    <!--------------------------------------------->
+    <div >
+   <div class="gSlider_2" >
+    <img class = "slider_img_2" src="https://i.pinimg.com/originals/0c/4e/1a/0c4e1aa79c4c8a23fab64f4ff979cce5.jpg" alt="" width="235px" height="300px">
+        <a href="/Home/Buy/2"><div class="gSlider_name_2"><h5 class="slider_text_2">Battlefield 1</h5></div></a>
+    </div>
+    </div>
+    <!--------------------------------------------->
+    <div >
+    <div class="gSlider_3" >
+<img class = "slider_img_3" src="https://storage.googleapis.com/api-ecommerce/fallout-new-vegas_cover_original.jpg" alt="" width="235px" height="300px">
+   <a href="/Home/Buy/3"><div class="gSlider_name_3"><h5 class="slider_text_3">Fallout New Vegas</h5></div></a>
+    </div>
+    </div>
+    <!--------------------------------------------->
+    <div >
+    <div class="gSlider_4" >
+<img class = "slider_img_4" src="https://s.gamer-info.com/gl/t/h/e/w/the-witcher-3-wild-hunt_ba.jpg" alt="" width="235px" height="300px">
+   <a href="/Home/Buy/4"><div class="gSlider_name_4"><h5 class="slider_text_4">Witcher 3</h5></div></a>
+    </div>
+    </div>
+    <!--------------------------------------------->
+       <div >
+    <div class="gSlider_4" >
+<img class = "slider_img_4" src="https://media.moddb.com/images/games/1/13/12814/COD-Black-Ops_PC-FOB.jpg" alt="" width="235px" height="300px">
+   <a href="/Home/Buy/5"><div class="gSlider_name_4"><h5 class="slider_text_4">Call of Duty</h5></div></a>
+    </div>
+    </div>
+
+
+</div>
+</div>
+</div>
+
+   </div>
+   <!-----------Description---------------->
+   <div class="discription">
+        <div class="descrip_img">
+    </div>
+    <div class="discrip_text">
+        <h2 class="discrip_text_1">INIMA GAME</h2>
+    <h3 class="discrip_text_2">Компания INIMA GAME стала символом изменений, инноваций и революционного апгрейда индустрии видеоигр. История IMINA GAME – это наглядное пособие для бизнесменов новой формации, показывающее, как нужно развиваться и как превратить штат из 3 сотрудников в организацию с миллионным оборотом</h3>
+    </div>
+   </div>
+   <!-----------Social---------------->
+      <div class="footer">
+      2022. All rights reserved
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <script>
+   $(function(){
+   console.log("fdfsfsfsf");
+    let scrolPos = $(window).scrollTop();
+    let nav_bar = $("#nav_bar");
+    $(window).on("scroll load",function(){
+        scrolPos = $(this).scrollTop();
+       console.log(scrolPos);
+        if(scrolPos>0){
+            nav_bar.addClass("pad");
+        }
+        else if(scrolPos==0){
+            nav_bar.removeClass("pad");
+        }
+    })
+    $("[data-scroll]").on("click",function(event){
+        event.preventDefault();
+        let elementID = $(this).data('scroll');
+       
+        if (elementID=="#new"){
+        $("html, body").animate({
+                 scrollTop: 1949
+        })
+        }
+          else if (elementID=="#dis"){
+        $("html, body").animate({
+                 scrollTop: 900
+        })
+        }
+   })
+    let slider = $("#slider");
+slider.slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+});
+});
+   </script>
+</body>
+</html>

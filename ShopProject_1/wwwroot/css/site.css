@@ -1,0 +1,316 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+body {
+    margin: 0;
+    font: 14px/1.42857143 "Open Sans",sans-serif;
+    color: #fff;
+    background: rgba(10,10,10,.9);
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+/*Head----------------------------------------------------*/
+.nav_bar {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    min-height: 80px;
+    background: rgba(10,10,10,.4);
+    transition: .3s background ease;
+}
+
+.container {
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+}
+
+.nav_link {
+    padding: 30px 0;
+    align-items: center;
+}
+
+.nav {
+    opacity: .8;
+    margin-left: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+    .nav:hover {
+        transition: .3s;
+        opacity: 1;
+    }
+
+.search {
+    float: right;
+    margin-right: 30px;
+}
+
+.form-search {
+    display: inline-block;
+    border-bottom: 1px solid;
+}
+
+    .form-search input {
+        all: unset;
+        opacity: .7;
+    }
+
+        .form-search input:hover {
+            opacity: 1;
+        }
+
+.reg {
+    color: white;
+    float: right;
+    transform: none;
+    text-decoration: none;
+}
+
+i {
+    font-style: normal;
+}
+
+.banner {
+    padding-top: 80px;
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.image {
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(Pict/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.name_game {
+    margin-bottom: 300px;
+    position: absolute;
+    font-weight: 100;
+    color: #ffff;
+    font: "Josefin Sans",sans-serif;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 20px;
+    height: 60px;
+    text-align: center;
+    width: 250px;
+    border: 1px solid;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    display: inline-block;
+}
+/*Slider--------------------------------------------------*/
+.slider {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: 400px;
+}
+
+.gSlider_1 {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.gSlider_2 {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.gSlider_3 {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.gSlider_4 {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.gSlider_1:hover .gSlider_name_1 {
+    opacity: 0.7;
+}
+
+.gSlider_name_1 {
+    opacity: 0;
+    transition: opacity, 0.2s;
+    background: #000;
+    position: absolute;
+    top: 64%;
+    width: 82.5%;
+    height: 30%;
+}
+
+.gSlider_2:hover .gSlider_name_2 {
+    opacity: 0.7;
+}
+
+.gSlider_name_2 {
+    opacity: 0;
+    transition: opacity, 0.2s;
+    background: #000;
+    position: absolute;
+    top: 64%;
+    width: 82.5%;
+    height: 30%;
+}
+
+.gSlider_3:hover .gSlider_name_3 {
+    opacity: 0.7;
+}
+
+.gSlider_name_3 {
+    opacity: 0;
+    transition: opacity, 0.2s;
+    background: #000;
+    position: absolute;
+    top: 64%;
+    width: 82.5%;
+    height: 30%;
+}
+
+.gSlider_4:hover .gSlider_name_4 {
+    opacity: 0.7;
+}
+
+.gSlider_name_4 {
+    opacity: 0;
+    transition: opacity, 0.2s;
+    background: #000;
+    position: absolute;
+    top: 64%;
+    width: 82.5%;
+    height: 30%;
+}
+
+.slider_text_1 {
+    border-bottom: 2px solid;
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.slider_text_2 {
+    border-bottom: 2px solid;
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.slider_text_3 {
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.slider_text_4 {
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.gSlider_1:hover .slider_img_1 {
+    filter: brightness(80%);
+}
+
+.gSlider_2:hover .slider_img_2 {
+    filter: brightness(80%);
+}
+
+.gSlider_3:hover .slider_img_3 {
+    filter: brightness(80%);
+}
+
+.gSlider_4:hover .slider_img_4 {
+    filter: brightness(80%);
+}
+/*decription---------------------------------------*/
+.discription {
+    width: 100%;
+    height: 650px;
+}
+
+.descrip_img {
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(Pict/desc.jpg);
+    opacity: 0.7;
+}
+
+.discrip_text {
+    width: 50%;
+    position: relative;
+    top: 30%;
+    left: 60px;
+}
+
+.discrip_text_1 {
+    letter-spacing: 3px;
+    font: "Josefin Sans",sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.discrip_text_2 {
+    letter-spacing: 3px;
+    font: "Josefin Sans",sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+}
+
